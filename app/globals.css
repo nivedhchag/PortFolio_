@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-system {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Paper Crush Animation */
+.paper-crush-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 100;
+}
+
+.paper-piece {
+  position: absolute;
+  width: 20%;
+  height: 25%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: paperCrush 1.5s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+@keyframes paperCrush {
+  0% {
+    transform: scale(1) rotate(0deg) translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(0.8) rotate(5deg) translateY(-20px);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(0.6) rotate(-10deg) translateY(-40px);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(0.3) rotate(15deg) translateY(-60px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0) rotate(25deg) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+/* Different animation variations for each piece */
+.paper-piece-1 { animation-delay: 0.1s; }
+.paper-piece-2 { animation-delay: 0.2s; }
+.paper-piece-3 { animation-delay: 0.3s; }
+.paper-piece-4 { animation-delay: 0.4s; }
+.paper-piece-5 { animation-delay: 0.5s; }
+.paper-piece-6 { animation-delay: 0.6s; }
+.paper-piece-7 { animation-delay: 0.7s; }
+.paper-piece-8 { animation-delay: 0.8s; }
+.paper-piece-9 { animation-delay: 0.9s; }
+.paper-piece-10 { animation-delay: 1.0s; }
+.paper-piece-11 { animation-delay: 0.15s; }
+.paper-piece-12 { animation-delay: 0.25s; }
+.paper-piece-13 { animation-delay: 0.35s; }
+.paper-piece-14 { animation-delay: 0.45s; }
+.paper-piece-15 { animation-delay: 0.55s; }
+.paper-piece-16 { animation-delay: 0.65s; }
+.paper-piece-17 { animation-delay: 0.75s; }
+.paper-piece-18 { animation-delay: 0.85s; }
+.paper-piece-19 { animation-delay: 0.95s; }
+.paper-piece-20 { animation-delay: 1.05s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
