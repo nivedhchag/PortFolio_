@@ -2,8 +2,16 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "",
+  "basePath": "/apple-portfolio",
   "redirects": [
+    {
+      "source": "/apple-portfolio/",
+      "destination": "/apple-portfolio",
+      "basePath": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^/apple-portfolio/$"
+    },
     {
       "source": "/:path+/",
       "destination": "/:path+",
@@ -45,5 +53,15 @@
     "pathHeader": "x-nextjs-rewritten-path",
     "queryHeader": "x-nextjs-rewritten-query"
   },
-  "rewrites": []
+  "rewrites": {
+    "beforeFiles": [
+      {
+        "source": "/apple-portfolio//_next/:path+",
+        "destination": "/apple-portfolio/_next/:path+",
+        "regex": "^/apple-portfolio//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+      }
+    ],
+    "afterFiles": [],
+    "fallback": []
+  }
 }

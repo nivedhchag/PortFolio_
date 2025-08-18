@@ -12,7 +12,7 @@
     },
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "",
+    "assetPrefix": "/apple-portfolio/",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.mjs",
     "useFileSystemPublicRoutes": true,
@@ -46,7 +46,7 @@
         256,
         384
       ],
-      "path": "/_next/image",
+      "path": "/apple-portfolio/_next/image",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -69,9 +69,9 @@
       "pagesBufferLength": 5
     },
     "amp": {
-      "canonicalBase": ""
+      "canonicalBase": "/apple-portfolio"
     },
-    "basePath": "",
+    "basePath": "/apple-portfolio",
     "sassOptions": {},
     "trailingSlash": false,
     "i18n": null,
@@ -88,6 +88,7 @@
     "logging": {},
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
+    "output": "export",
     "modularizeImports": {
       "@mui/icons-material": {
         "transform": "@mui/icons-material/{{member}}"
